@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:auht/config/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,12 +19,8 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3),
-            ()=>Navigator.pushReplacement(context,
-            MaterialPageRoute(builder:
-                (context) =>
-                OnBoardingScreen()
-            )
-        )
+            ()=>Navigator.pushReplacementNamed(context, AppRoutes.ONBOARDING)
+
     );
   }
 
