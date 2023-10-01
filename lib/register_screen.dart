@@ -15,6 +15,15 @@ class _RegisterState extends State<Register> {
   TextEditingController NameController = TextEditingController();
   TextEditingController EmailController = TextEditingController();
   TextEditingController PasswordController = TextEditingController();
+
+  @override
+  void dispose() {
+    NameController.dispose();
+    PasswordController.dispose();
+    EmailController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
